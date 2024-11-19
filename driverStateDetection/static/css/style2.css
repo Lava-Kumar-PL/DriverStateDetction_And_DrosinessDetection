@@ -1,0 +1,90 @@
+body {
+    width: 90%;
+    margin: auto;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    height: 5px;
+    background-color: grey;
+}
+
+navbar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.about {
+    height: 250px;
+    padding: 1% 2%;
+    border-radius: 15px;
+    background: linear-gradient(112.2deg, rgb(0, 204, 255) -1.1%, rgb(0, 221, 61) 100.7%);
+}
+
+#about-content {
+    font-size: 18px;
+}
+
+.cnn, .drowsi, .mobile {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.cnn-content, .dro-content, .mob-content {
+    width: 60%;
+    padding: 10px 15px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mob-content{
+    margin-top: -30px;
+}
+
+.cnn-image, .dro-image, .mob-image {
+    margin-right: 70px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 28%;
+    border: 1px solid black;
+}
+
+.cnn-image img, .dro-image img, .mob-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.btn {
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #0056b3;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Animation styles */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style2.css"> -->
+    <link href="{{ url_for('static', filename='css/style2.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/script2.js') }}" type="text/javascript"></script>
+</head>
+<body>
+    <navbar>
+        <p class="animate">DriveSafe</p>
+        <p></p>
+    </navbar>
+    <hr>
+    <div class="about animate">
+        <h3 ><b><u>About:</u></b></h3>
+        <p id="about-content">In an era where road safety is paramount, distracted driving and driver fatigue are significant contributors to vehicular accidents. The DriveSafe system addresses this critical issue by utilizing advanced Convolutional Neural Network (CNN) technology to detect mobile phone usage and drowsiness in drivers in real-time. By leveraging a robust dataset and sophisticated machine learning algorithms, DriveSafe continuously monitors driver behavior through a camera feed, providing immediate alerts when unsafe driving conditions are detected. This proactive approach not only enhances driver awareness but also prevents potential accidents, making roads safer for everyone. With DriveSafe, we aim to bring peace of mind to drivers and their loved ones, ensuring every journey is a safe one.</p>
+    </div>
+    <hr>
+    <div class="cnn animate">
+        <div class="cnn-content">
+            <h4 id="whyCnn"><b><u>Why CNN?</u></b></h4>
+            Convolutional Neural Networks (CNNs) are ideal for this project because they excel at processing and analyzing visual data, making them highly effective for image and video recognition tasks. Their ability to automatically learn and extract hierarchical features from raw pixel data enables accurate detection of complex patterns such as mobile usage and drowsiness in drivers. Additionally, CNNs are robust and scalable, ensuring reliable performance even with large datasets and diverse driving conditions.
+        </div>
+        <div class="cnn-image">
+            <img src="{{ url_for('static', filename='imgs/cnn.png') }}" alt="">
+        </div>
+    </div>
+    <hr>
+
+    <div class="drowsi animate">
+        <div class="dro-image">
+            <img src="{{ url_for('static', filename='imgs/drowsiness.jpg') }}" alt="">
+        </div>
+        <div class="dro-content">
+            <h4 id="whyCnn"><b><u>Drowsiness Detection</u></b></h4>
+            <p>Drowsiness while driving is a major safety concern, as it significantly impairs reaction times and decision-making abilities, leading to a higher risk of accidents. Our solution uses advanced machine learning techniques to analyze facial key points, monitoring eye closure, and head position in real-time. By accurately detecting these signs of drowsiness, our system provides timely alerts to the driver, enhancing road safety and preventing potential accidents.</p>
+            
+           
+            <a href="http://127.0.0.1:8000/"  target="_blank"> <button class="btn btn0">Try Model</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="mobile animate">
+        
+        <div class="mob-content">
+            <p>
+                <h4 id="whyCnn"><b><u>Mobile usage detection</u></b></h4>
+                Mobile usage while driving is a significant distraction that greatly increases the risk of accidents by diverting attention away from the road. Our solution utilizes Convolutional Neural Networks (CNNs) to accurately detect mobile phone usage in real-time by analyzing video feeds for specific hand and phone movements. By providing immediate alerts to drivers, our system helps to mitigate distractions and enhance overall road safety.</p>
+            
+            <a href="{{ url_for('mobile') }}"  target="_blank"><button class="btn">Try Model</button></a>
+        </div>
+        <div class="mob-image">
+            <img src="{{ url_for('static', filename='imgs/mobile.jpg') }}" alt="">
+        </div>
+    </div>
+    <hr>
+    
+    <!-- <script src="./script2.js"></script> -->
+</body>
+</html>

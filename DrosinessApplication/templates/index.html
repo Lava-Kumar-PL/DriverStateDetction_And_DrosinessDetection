@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drowsiness and Yawning Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-bottom: 4px solid #444;
+            margin-bottom: 20px;
+        }
+
+        #video_feed {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+
+        #startButton, #stopButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #startButton {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        #startButton:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        #stopButton {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        #stopButton:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+
+        #startButton:active, #stopButton:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <h1>Drowsiness and Yawning Detection</h1>
+    <button id="startButton" onclick="startDetection()">Start Detection</button>
+    <button id="stopButton" onclick="stopDetection()" style="display:none;">Stop Detection</button>
+    <div>
+        <img id="video_feed" src="" alt="Video Feed">
+    </div>
+    <script>
+        function startDetection() {
+            fetch('/start')
+                .then(response => {
+                    document.getElementById("video_feed").src = "/video_feed";
+                    document.getElementById("video_feed").style.display = "block";
+                    document.getElementById("startButton").style.display = "none";
+                    document.getElementById("stopButton").style.display = "inline-block";
+                });
+        }
+
+        function stopDetection() {
+            fetch('/stop')
+                .then(response => {
+                    document.getElementById("video_feed").src = "";
+                    document.getElementById("video_feed").style.display = "none";
+                    document.getElementById("startButton").style.display = "inline-block";
+                    document.getElementById("stopButton").style.display = "none";
+                });
+        }
+    </script>
+</body>
+</html>
