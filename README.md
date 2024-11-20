@@ -87,9 +87,13 @@ To enhance the project's capabilities, a **drowsiness detection feature** was ad
    - Monitors eye-related facial points.
    - If the distance between eyelid points falls below a threshold for a sustained period, drowsiness is identified.
 
-### Output
+  ### Output
 
 When signs of drowsiness (e.g., yawning or prolonged eye closure) are detected, alerts can be triggered to warn the driver.
+  
+     <img src="https://github.com/Lava-Kumar-PL/DriverStateDetction_And_DrosinessDetection/blob/main/DrosinessApplication/imgs/drowsinessDetection.gif" width="400" />  ![](https://github.com/Lava-Kumar-PL/DriverStateDetction_And_DrosinessDetection/blob/main/DrosinessApplication/imgs/drowsinessDetection2.gif)
+
+
 
 ## Run Locally
 
