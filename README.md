@@ -96,16 +96,16 @@ When signs of drowsiness (e.g., yawning or prolonged eye closure) are detected, 
 Clone the Project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Lava-Kumar-PL/DriverStateDetction_And_DrosinessDetection.git
 ```
 
 Download the dataset from:-
 [Kaggle State Farm Distracted Driver Detection](https://www.kaggle.com/c/state-farm-distracted-driver-detection/data)
 
-Extract the dataset from zip file and move the test and train dataset into
+Extract the dataset from the zip file and move the test and train dataset into
 
 ```
-Distracted-Driver-Detection\Training Notebooks\imgs
+Training Notebooks\imgs
 ```
 
 ### Prerequisites
@@ -115,9 +115,9 @@ Distracted-Driver-Detection\Training Notebooks\imgs
   ```bash
   pip install -r requirements.txt
   ```
-  Run `Distracted-Driver-Detection\Training Notebooks\CustomCNN.ipynb` file to build CNN Model which detects Driver's Distracted state and the best model will saved locally in `Distracted-Driver-Detection\Training Notebooks\model\self_trained`.And note down the output in the cell **Converting into numerical values**
+  Run `Training Notebooks\CustomCNN.ipynb` file to build the CNN Model which detects the Driver's Distracted state and the best model will saved locally in `Training Notebooks\model\self_trained`.And note down the output in the cell **Converting into numerical values**
 
-Move the best Model from `Distracted-Driver-Detection\Training Notebooks\model\self_trained` to `driverStateDetection\`
+Move the best Model from `Training Notebooks\model\self_trained` to `driverStateDetection\`
 
 In the `driverStateDetection\app.py` in variable **maping** enter your **Converting into numerical values** by changing the keys to values and values to keys
 
@@ -127,7 +127,7 @@ Go to the project directory
   cd driverStateDetection
 ```
 
-Start the Driver state detction app
+Start the driver state detection app
 
 ```bash
   python app.py
@@ -135,9 +135,9 @@ Start the Driver state detction app
 
 Open new terminal
 
-Activate virtual enironment as the libraries version required to read 'shape_predictor_68_face_landmarks` needs older version which conflicts with version required by Driver sate detection app
+Activate virtual environment as the libraries version required to read 'shape_predictor_68_face_landmarks` needs an older version which conflicts with the version required by the Driver state detection app
 
-Anconda should installed locally
+Anaconda should be installed locally
 
 ```bash
   conda activate env
