@@ -28,11 +28,11 @@ The project involves the following tasks:
 1. **Data Download and Preprocessing**:
    - Obtain and preprocess driver images for training, validation, and testing.
 2. **Model Development**:
-   - Build and train a machine learning model to classify distracted driving behaviors.
-   - Implement drowsiness detection using the `shape_predictor_68_face_landmarks` model to track key facial points.
+   - Built and trained CNN model to classify distracted driving behaviors.
+   - Implemented drowsiness detection using the `shape_predictor_68_face_landmarks` model to track key facial points.
 3. **Model Testing and Optimization**:
    - Test the models for accuracy and robustness.
-   - Improve performance using advanced techniques such as data augmentation, hyperparameter tuning, and transfer learning.
+   - Improved performance using advanced techniques such as hyperparameter tuning.
 
 ---
 
